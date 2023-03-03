@@ -10,6 +10,8 @@ This pipeline includes the following processing / analysis:
   * Velocity Calculation, Movement Onset and Offset Alignment
 * Reward
   * Reward Delivery and Lick Onset Alignment
+* Figures
+  * Plotting figures in Krok et al. 2023
 
 
 ## Dependencies:
