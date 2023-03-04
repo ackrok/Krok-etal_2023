@@ -1,6 +1,6 @@
-# Krok_2023_ACh-DA_ms
+# Krok-etal_2023_DA-ACh
 
-The functions and script in this repository were developed to process, analyzem and visualize data acquired during fiber photometry and electrophysiological experiments. 
+The functions and script in this repository were developed to process, analyzem and visualize data acquired during fiber photometry and electrophysiological experiments presented in Krok et al. 2023.
 
 This pipeline includes the following processing / analysis:
 
@@ -34,7 +34,7 @@ Download the repositories and add them to your MATLAB path
 
 ## Steps:
 
-1. Convert h5 files
+1. Convert h5 files to .mat files
 
       From the TLab Toolbox, run **convertH5** to convert h5 files from wavesurfer into the format required for analysis, .mat
 
