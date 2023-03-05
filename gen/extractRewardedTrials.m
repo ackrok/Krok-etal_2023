@@ -45,9 +45,9 @@ function [rewYes, rewNo, lickNew] = extractRewardedTrials(rewDelivery, lick, var
     rew_lick0 = find(sum(cts,1) == 0); % Find reward index where total licks within window is 0
 
     rew_prelick = [];
-%     bin = 1/1000; window = [-0.2 0];
-%     peth = getClusterPETH(lickNew, rewDelivery, bin, window);
-%     rew_prelick = find(sum(peth.cts{1},1) >= 1); % Find reward index for trials where mouse licks preceding reward
+    bin = 1/1000; window = [-0.2 0];
+    peth = getClusterPETH(lickNew, rewDelivery, bin, window);
+    rew_prelick = find(sum(peth.cts{1},1) >= 1); % Find reward index for trials where mouse licks preceding reward
         
     rewDelivery([rew_lick0, rew_prelick]) = nan; 
     cts(:, [rew_lick0, rew_prelick]) = nan; % Remove non-rewarded trials and trials where mouse licks preceding reward
