@@ -1,4 +1,4 @@
-load('C:\Users\Anya\Desktop\FP_LOCAL\fig1\krok_fig1_fft')
+load('C:\Users\Anya\Desktop\FP_LOCAL\krok_fig1_fft')
 
 %% Figure 1I, 1M
 f = out(1).f; flog = out(1).flog; % extract frequency domain vectors
@@ -48,7 +48,8 @@ for x = 1:length(out)
             sub_mat = plotme{z}(:,y) - nanmean(out(x).fluor,2); % subtract FFT of stable fluorophore
             auc{z}(y) = trapz(sub_mat(r_auc))/length(r_auc);
         end
-        auc{z}(auc{z} == 0) = nan; auc{z}(auc{z} < 0) = 0;
+        auc{z}(auc{z} == 0) = nan; 
+        auc{z}(auc{z} < 0) = 0;
         j1 = -0.2+z; j2 = 0.2+z; jit = j1 + (j2-j1).*rand(length(auc{z}),1); % jitter
         plot(jit, auc{z}, '.', 'MarkerSize', 20, 'Color', clr{x}); % Plot area under curve power data points for each recording
     end
