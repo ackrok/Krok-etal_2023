@@ -1,6 +1,6 @@
 %% INPUTS
 nAn = length(comp(1).s);
-lickWithin = 0.25;      % CHANGE, lick within this window
+lickWithin = 1;      % CHANGE, lick within this window
 winRew = [-1 2];        % CHANGE, window for aligning signal to rewarded trials, in seconds
 winBase = [-4 -1];
 winPkDA = [100 500];    % CHANGE, window for DA peak, in milliseconds
