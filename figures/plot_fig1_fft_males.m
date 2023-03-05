@@ -1,6 +1,4 @@
-males = [1 2 3 6 8 9]; females = [4 5 7 10];
-
-load('C:\Users\Anya\Desktop\FP_LOCAL\fig1\krok_fig1_fft')
+load('C:\Users\Anya\Desktop\FP_LOCAL\krok_fig1_fft')
 
 %%
 f = out(1).f; flog = out(1).flog; % extract frequency domain vectors
