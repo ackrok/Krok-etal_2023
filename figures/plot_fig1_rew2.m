@@ -10,7 +10,7 @@ end
 if ~exist('beh','var'); error('No variable called beh exists'); end
 
 %% Variables
-lickWithin = 0.25; %CHANGE, lick within this window
+lickWithin = 1; %CHANGE, lick within this window
 winRew = [-1 2]; % CHANGE, window for aligning signal to rewarded trials
 winBase = [-4 -1]; % window for baseline
 NumStd = 2; % CHANGE, for immobility trough/peak analysis
