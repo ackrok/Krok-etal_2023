@@ -4,9 +4,10 @@ fig = figure; fig.Position(3) = 1000;
 subplot(1,2,1); hold on
 clr = {'m','r','c','b','g'};
 x = 4; cts = matExample(x).cts0; % extract counts
-cts(cts > 1) = 1; 
+cts(cts > 1) = 1; % correct for error of multiple spikes in each bin
 cts = sum(cts, 1); % sum across units
-time = [-1:1/50:1]';
+Fs = 50; % sampling frequency
+time = [-1:1/Fs:1]';
 for y = 1:length(matExample)
     iTmp = find(cts == y-1); iTmp = iTmp'; % index of coherence among units
     iTmp_imm = matExample(x).idxImm((ismember(matExample(x).idxImm, iTmp))); % index of coherence among units that occur during immobility
