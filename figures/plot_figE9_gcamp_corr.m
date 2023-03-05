@@ -36,8 +36,8 @@ mat_corr = []; % initialize output
 mat_shuff5 = []; mat_shuff50 = [];
 for x = 1:nAn
     idx = find(strcmp(rec,uni{x})); % identify all recordings from this animal
-    [~,idx2] = max(max([mat(idx).c])); % maximum amongst corr for all recordings
-    mat_corr(:,x) = [mat(idx(idx2)).c]; % extract recording with highest correlation
+    [~,idx2] = max(max([mat(idx).c]));
+    mat_corr(:,x) = [mat(idx(idx2)).c]; % extract recording
     mat_corr(:,x) = mat_corr(:,x) - nanmean(mat_corr(find([lags/Fs] == -2):find([lags/Fs] == -1),x));
     mat_shuff5(:,x) = mat(idx(idx2)).shuff(:,1);
     mat_shuff50(:,x) = mat(idx(idx2)).shuff(:,2);
