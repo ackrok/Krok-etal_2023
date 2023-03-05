@@ -49,7 +49,6 @@ end
 fprintf('DONE\n');
 
 %% Peak amplitude and latency for all mice, early vs late
-nAn = 14;
 winPkDA = [100 500];    % CHANGE, window for DA peak, in milliseconds
 winTrACh = [300 700];   % CHANGE, window for ACh trough, in milliseconds
 lag = {}; val = {}; % initialize output
