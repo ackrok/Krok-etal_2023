@@ -1,4 +1,4 @@
-load('C:\Users\Anya\Desktop\FP_LOCAL\fig1\krok_fig1_beh.mat')
+load('C:\Users\Anya\Desktop\FP_LOCAL\krok_fig1_beh.mat')
 
 %% Figure 1B
 flbl = 'fig 1B'; state = {'reward','locomotion','immobility'};
