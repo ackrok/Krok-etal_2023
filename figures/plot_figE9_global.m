@@ -4,7 +4,7 @@ load('C:\Users\Anya\Desktop\FP_LOCAL\fig1\krok_SX_globalSignal_data');
 %%
 r = [0.02; 1200]; r = [r, r+100];
 val = cell(1,2); for y = 1:2; val{y} = nan(8,length(cannula)); end
-mouse = {'AK189','AK190','AK193','AK197','AK239','AK240','AK241','AK243','AK444'};
+mouse = {'AK189','AK190','AK193','AK197','AK239','AK240','AK241','AK243'};
 
 for z = 1:length(cannula)
     beh = cannula(z).s; nAn = length(beh);
